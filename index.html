@@ -1011,10 +1011,21 @@
     <!-- JavaScript for back to top button -->
     <script>
         // グローバル変数の再宣言エラーを防ぐためのフラグチェック
-        if (typeof backToTopButton === 'undefined') {
-  const backToTopButton = document.getElementById('backToTopButton');
-  // イベントリスナーもここで処理
-}
+        const backToTopButton = document.getElementById('backToTopButton') || document.querySelector('.back-to-top');
+
+  if (backToTopButton) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
         // バーガーの表示/非表示
         const toggleButton = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
@@ -1022,8 +1033,6 @@
   toggleButton.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
-        // ページトップボタンの表示/非表示
-        const backToTopButton = document.querySelector('.back-to-top');
         
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
