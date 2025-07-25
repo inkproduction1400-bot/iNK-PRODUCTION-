@@ -108,6 +108,10 @@
 <body class="relative">
     <!-- 3D Background Canvas -->
     <div id="canvas-container" class="fixed top-0 left-0 w-full h-full -z-10 opacity-20"></div>
+
+    <button id="backToTopButton" class="fixed bottom-4 right-4 p-3 bg-purple-600 text-white rounded-full shadow-md hidden z-50">
+        ↑
+      </button>
     
     <!-- Navigation -->
     <nav class="fixed w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-md shadow-sm z-50">
@@ -1007,26 +1011,10 @@
     <!-- JavaScript for back to top button -->
     <script>
         // グローバル変数の再宣言エラーを防ぐためのフラグチェック
-  if (!window._backToTopInitialized) {
-    window._backToTopInitialized = true;
-
-    const backToTopButton = document.getElementById("backToTopButton");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove("hidden");
-      } else {
-        backToTopButton.classList.add("hidden");
-      }
-    });
-
-    backToTopButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  }
+        if (typeof backToTopButton === 'undefined') {
+  const backToTopButton = document.getElementById('backToTopButton');
+  // イベントリスナーもここで処理
+}
         // バーガーの表示/非表示
         const toggleButton = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
