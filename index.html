@@ -1006,6 +1006,27 @@
 
     <!-- JavaScript for back to top button -->
     <script>
+        // グローバル変数の再宣言エラーを防ぐためのフラグチェック
+  if (!window._backToTopInitialized) {
+    window._backToTopInitialized = true;
+
+    const backToTopButton = document.getElementById("backToTopButton");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.remove("hidden");
+      } else {
+        backToTopButton.classList.add("hidden");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
         // バーガーの表示/非表示
         const toggleButton = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
