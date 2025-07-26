@@ -12,13 +12,13 @@
   <meta property="og:title" content="{{ page.title }}｜INK PRODUCTION" />
   <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 120 }}" />
   <meta property="og:image" content="https://inkproduction1400-bot.github.io/ink-production-site/images/ogp.png" />
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="INK PRODUCTION" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png" />
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -80,8 +80,8 @@
       </div>
     </div>
     <ul id="menu" class="hidden md:hidden menu ml-auto text-right pr-6">
-      <li><a href="/index.html">ホーム</a></li>
-      <li><a href="/blog.html">ブログ</a></li>
+      <li><a href="{{ site.baseurl }}/index.html">ホーム</a></li>
+      <li><a href="{{ site.baseurl }}/blog.html">ブログ</a></li>
       <li><a href="/news.html">NEWS</a></li>
       <li><a href="/company.html">会社概要</a></li>
       <li><a href="/contact.html">お問い合わせ</a></li>
