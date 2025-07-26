@@ -172,7 +172,9 @@ title: ブログ一覧
   <ul class="space-y-4">
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url }}" class="text-xl text-indigo-600 hover:underline font-medium">{{ post.title }}</a>
+        <a href="/ink-production-site/blog/{{ post.url | split: '/' | last | replace: '.md', '.html' }}">
+            {{ post.title }}
+          </a>
         <p class="text-sm text-gray-500">{{ post.date | date: "%Y年%m月%d日" }}</p>
       </li>
     {% endfor %}
