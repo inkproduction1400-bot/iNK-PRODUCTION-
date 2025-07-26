@@ -7,3 +7,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 permalink: /blog/:title.html
+permalink: /:year/:month/:day/:title.html
