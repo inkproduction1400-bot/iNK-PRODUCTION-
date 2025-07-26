@@ -1,9 +1,9 @@
 title: INK PRODUCTION BLOG
 description: "INK PRODUCTIONの公式ブログ。デザイン、マーケ、AIなどのトピックを発信"
-baseurl: "/ink-production-site"
+baseurl: "/ink-production-site" # リポジトリ名と一致
 url: "https://inkproduction1400-bot.github.io"
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-permalink: /:year/:month/:day/:title.html
+permalink: /blog/:title.html
