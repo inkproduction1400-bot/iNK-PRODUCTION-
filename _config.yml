@@ -1,0 +1,8 @@
+title: INK PRODUCTION BLOG
+description: "INK PRODUCTIONの公式ブログ。デザイン、マーケ、AIなどのトピックを発信"
+baseurl: "" # カスタムドメインを使うなら空
+url: "https://inkproduction1400-bot.github.io/INK-PRODUCTION-" # 本番URLに変更する
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

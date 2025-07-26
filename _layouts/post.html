@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}｜INK PRODUCTION ブログ</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 120 }}" />
+  <meta name="keywords" content="ブログ, 動画制作, WEB制作, AI開発, マーケティング, INK PRODUCTION" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="{{ page.title }}｜INK PRODUCTION" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 120 }}" />
+  <meta property="og:image" content="https://inkproduction1400-bot.github.io/ink-production-site/images/ogp.png" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="INK PRODUCTION" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 独自フォント・CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    article h1, h2, h3 {
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+    article img {
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+    article p {
+      line-height: 1.8;
+      margin: 1rem 0;
+    }
+    .prose a {
+      color: #4f46e5;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="relative">
+
+  <!-- ナビゲーション（共通で blog.html のものを踏襲） -->
+  <nav class="fixed w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">iNK</div>
+            <span class="ml-3 text-xl font-bold text-gray-900 hover:text-indigo-600 transition">iNK PRODUCTION</span>
+          </div>
+        </div>
+        <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+          <a href="/index.html" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition">ホーム</a>
+          <a href="/blog.html" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition">ブログ</a>
+          <a href="/news.html" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition">NEWS</a>
+          <a href="/company.html" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition">会社概要</a>
+          <a href="/contact.html" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition">お問い合わせ</a>
+        </div>
+        <div class="-mr-2 flex items-center md:hidden">
+          <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <ul id="menu" class="hidden md:hidden menu ml-auto text-right pr-6">
+      <li><a href="/index.html">ホーム</a></li>
+      <li><a href="/blog.html">ブログ</a></li>
+      <li><a href="/news.html">NEWS</a></li>
+      <li><a href="/company.html">会社概要</a></li>
+      <li><a href="/contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- 記事本文 -->
+  <main class="pt-24 max-w-4xl mx-auto px-4">
+    <article class="prose prose-lg">
+      <h1 class="text-3xl font-bold mb-2">{{ page.title }}</h1>
+      <p class="text-sm text-gray-500 mb-6">{{ page.date | date: "%Y年%m月%d日" }}</p>
+      {{ content }}
+    </article>
+
+    <!-- 戻るリンク -->
+    <div class="mt-12">
+      <a href="/blog.html" class="text-indigo-600 hover:underline">&larr; ブログ一覧へ戻る</a>
+    </div>
+  </main>
+
+  <!-- モバイルメニュー JS -->
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('menu');
+    menuButton?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
