@@ -3,9 +3,3 @@ description: "INK PRODUCTIONの公式ブログ。デザイン、マーケ、AI�
 baseurl: "/ink-production-site"
 url: "https://inkproduction1400-bot.github.io"
 theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-include:
-  - _posts
-permalink: /:year/:month/:day/:title.html
