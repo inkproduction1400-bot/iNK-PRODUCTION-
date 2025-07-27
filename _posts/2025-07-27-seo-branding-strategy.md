@@ -2,6 +2,7 @@
 layout: post
 title: "企業ホームページで“集客できる”仕組みを作るには？SEOとブランディングの基本戦略"
 date: 2025-07-27
+excerpt: "ホームページを最強の営業ツールに育てる方法とは？を解説します。"
 categories: [Web制作, SEO, ブランディング, 中小企業支援]
 tags: [SEO対策, ホームページ制作, SNS運用, コンテンツマーケティング, 中小企業, スタートアップ]
 permalink: /2025/07/27/seo-branding-strategy.html
