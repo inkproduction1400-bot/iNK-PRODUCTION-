@@ -172,7 +172,7 @@ title: ブログ一覧
   <ul class="space-y-4">
     {% for post in site.posts %}
       <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}記事へ</a>   
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} → </a>   
         <p class="text-sm text-gray-500">{{ post.date | date: "%Y年%m月%d日" }}</p>
       </li>
     {% endfor %}
