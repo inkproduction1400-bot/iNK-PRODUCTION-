@@ -196,7 +196,9 @@ title: ブログ一覧
   <ul class="space-y-4">
     {% for post in site.posts %}
       <li>
-        <a href="2025/07/26/ai-case-study.html">{{ page.title }} - 記事を見る -</a>   
+        <a href="{{ post.url }}" class="text-xl text-indigo-600 hover:underline">
+            {{ post.title }}
+          </a>  
         <p class="text-sm text-gray-500">{{ post.date | date: "%Y年%m月%d日" }}</p>
       </li>
     {% endfor %}
