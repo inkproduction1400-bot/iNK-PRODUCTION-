@@ -6,7 +6,6 @@ excerpt: "AIの導入によって業務効率や売上がどのように改善�
 categories: [AI, Business, DX, 活用事例]
 tags: [AI, ChatGPT, 生成AI, DX, ビジネス事例, 業務効率化, マーケティング]
 permalink: /2025/07/26/ai-case-study.html
-permalink: /INK-PRODUCTION-/2025/07/26/ai-case-study.html
 ---
 
 ## はじめに
