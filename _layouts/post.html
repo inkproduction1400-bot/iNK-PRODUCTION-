@@ -83,12 +83,12 @@ layout: default
       </div>
     </div>
     <ul id="menu" class="hidden md:hidden menu ml-auto text-right pr-6">
-      <li><a href="{{ site.baseurl }}/index.html">ホーム</a></li>
-      <li><a href="{{ site.baseurl }}/blog.html">ブログ</a></li>
-      <li><a href="/news.html">NEWS</a></li>
-      <li><a href="/company.html">会社概要</a></li>
-      <li><a href="/contact.html">お問い合わせ</a></li>
-    </ul>
+        <li><a href="{{ '/index.html' | relative_url }}">ホーム</a></li>
+        <li><a href="{{ '/company.html' | relative_url }}">会社情報</a></li>
+        <li><a href="{{ '/news.html' | relative_url }}">NEWS</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}">ブログ</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}">お問い合わせ</a></li>
+      </ul>
   </nav>
 
   <!-- 記事本文 -->
@@ -101,7 +101,7 @@ layout: default
 
     <!-- 戻るリンク -->
     <div class="mt-12">
-        <a href="{{ site.baseurl }}/blog.html" class="text-indigo-600 hover:underline">&larr; ブログ一覧へ戻る</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="text-indigo-600 hover:underline">&larr; ブログ一覧へ戻る</a>
     </div>
   </main>
 
