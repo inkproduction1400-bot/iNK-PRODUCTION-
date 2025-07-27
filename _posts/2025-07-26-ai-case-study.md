@@ -5,6 +5,7 @@ date: 2025-07-26
 excerpt: "AIの導入によって業務効率や売上がどのように改善されたのか。実際の企業のAI活用事例を5つ厳選して紹介し、導入効果や活用のポイントを詳しく解説します。"
 categories: [AI, Business, DX, 活用事例]
 tags: [AI, ChatGPT, 生成AI, DX, ビジネス事例, 業務効率化, マーケティング]
+permalink: /2025/07/26/ai-case-study.html
 ---
 
 ## はじめに
